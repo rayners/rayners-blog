@@ -12,6 +12,7 @@ With [GeekTool][geektool], among other things, I can stick the output of any she
 
 From [`~/.emacs.d/rayners/org.el`](http://github.com/rayners/emacs.d/blob/master/rayners/org.el):
 
+{% highlight cl %}
     (setq org-agenda-custom-commands
           '(
             ;; ...
@@ -22,6 +23,7 @@ From [`~/.emacs.d/rayners/org.el`](http://github.com/rayners/emacs.d/blob/master
               (org-deadline-warning-days 7))
              ("~/agenda.txt"))
             ))
+{% endhighlight %}
 
 Which translates to roughly: today's agenda, all my to-do items and warnings for any deadlines in the next week.
 
