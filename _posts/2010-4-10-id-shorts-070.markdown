@@ -1,0 +1,13 @@
+--- 
+layout: post
+title: Id Shorts 0.7.0
+mt_id: 10
+date: 2010-04-10 00:23:43 +01:00
+---
+<a href="http://rayners.org/assets/Edit_Entry_-_David_Raynes_|_Movable_Type_Pro-20100410-002145.jpg"><img alt="Added short url to edit entry page" src="http://rayners.org/assets_c/2010/04/Edit_Entry_-_David_Raynes_|_Movable_Type_Pro-20100410-002145-thumb-250x171-13.jpg" width="250" height="171" class="mt-image-right" style="float: right; margin: 0 0 20px 20px;" /></a>
+
+I have updated IdShorts based on some initial feedback:
+
+* Added the `<mt:entryshorturl>` template tag
+* Added the short url (for easy copy+pasting!) to the edit entry page
+* Added a config setting for the short url "template" defaulting to "`<mt:blogurl><mt:entryid>`" 
