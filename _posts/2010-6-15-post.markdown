@@ -1,6 +1,0 @@
---- 
-layout: post
-mt_id: 26
-date: 2010-06-15 14:21:46 +01:00
----
-<embed src='http://www.thq.com/tv/tv_mini_embed.swf' flashvars='loc=uk&vidId=4077' type='application/x-shockwave-flash' width='475' height='290' ></embed> 
