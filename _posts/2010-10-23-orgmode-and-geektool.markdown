@@ -1,3 +1,9 @@
+--- 
+layout: post
+title: OrgMode and GeekTool
+mt_id: 34
+date: 2010-10-23 23:00:00 +01:00
+---
 I use [OrgMode][orgmode] to manage my task list and I am trying to make it into my main calendar.  One of the things I keep in mind as I work my way through the various configuration options and customizations is that I want to use [OrgMode][orgmode] as little as possible; do what I need to do with it and get back to what I am actually doing.
 
 One of the big problems in that realm that I have run into is that it takes effort for me to view my agenda and to-do list.  Yes, it's a _small_ effort to type `C-c a a` when I'm in emacs, but I still have to remember to do that so I can check it.  Enter [GeekTool][geektool].
@@ -32,4 +38,4 @@ Next, I added a geeklet in [GeekTool][geektool] that runs the following command:
 [OrgMode][orgmode] also has a CSV agenda export function that might warrant some exploring in the not too distant future.  If nothing else, it might be a useful link the tool-chain to connect all my various calendars.
 
   [orgmode]: http://orgmode.org/
-  [geektool]: http://projects.tynsoe.org/en/geektool/
+  [geektool]: http://projects.tynsoe.org/en/geektool/ 
