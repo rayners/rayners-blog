@@ -54,7 +54,7 @@ pre, code { font-family: 'Droid Sans Mono'; }
       <hgroup><h1>David Raynes</h1></hgroup>
     </header>
     <section id="main">
-{% for post in site.posts limit:6 %}
+{% for post in site.posts limit:1 %}
 <article>
   <header><h1><a href="{{ post.url }}">{{ post.title }}</a></h1></header>
 {{ post.content }}
