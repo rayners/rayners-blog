@@ -1,3 +1,4 @@
 pygments: true
 permalink: pretty
 #auto: true
+markdown: rdiscount
