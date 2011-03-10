@@ -7,12 +7,10 @@ During the day now, instead of doing my development work locally on my laptop, I
 Thanks to Emacs' [TRAMP][], it is fairly easy to edit remote files. With a file name in the form of `"/<protocol>:<user>@<host>:<path>"` Emacs will use that protocol to connect to the remote account, make a local copy of the file and push changes to the local file to the remote one.
 
 <aside>
-
-The protocol used is not limited to just remote connections; you can also use `sudo` for example to edit files as though you were running `sudo`.
-
+The protocol used is not limited to just remote connections; you can also use `sudo`, for example, to edit files as though you were running `sudo`.
 </aside>
 
-And, as a bonus, when a remote file is opened, features like Emacs' version control that spawn external processes will operate on the remote machine as well. So I can open up a file in a remote directory that is in a git repository and do the version control work I need to do in Emacs itself without having to open a shell on the remote machine at all.
+And, as a bonus, when a remote file is opened, features like Emacs' version control that spawn external processes will operate on the remote machine as well. So I can open up a file in a remote directory that is in a git repository and do the version control work I need to do within Emacs itself and without having to open a shell on the remote machine.
 
 So, for starters, I created a variable to store the remote path where I do the majority of my work.
 
@@ -21,6 +19,8 @@ So, for starters, I created a variable to store the remote path where I do the m
     (defvar rayners/remote-dir (format "/ssh:%s@%s:%s" user-login-name rayners/remote-host rayners/remote-project))
 
 {% endhighlight %}
+
+Then I added some more stuff
 
 {% highlight cl %}
 
