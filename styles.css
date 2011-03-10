@@ -34,7 +34,8 @@ nav#tag-cloud .rank-9  { font-size: 0.95em; }
 nav#tag-cloud .rank-10 { font-size: 0.9em; }*/
 section#copyright { font-style: italic; }
 pre, code { font-family: 'Droid Sans Mono'; }
-section#main p { line-height: 1.2 }
+div.highlight { clear:both }
+section#main article > p { line-height: 1.2 }
 ul, menu, dir {
 	display: block;
 	list-style-type: square;
@@ -44,3 +45,16 @@ li {
 	display: list-item;
 	margin-left: 3em;
 }
+
+aside {
+	float: right;
+	border: 1px dashed;
+	margin: 0 5px;
+	padding: 0 5px;
+
+	font-size: 85%;
+	width: 18%;
+	font-style: oblique;
+}
+
+article aside p { line-height: 1.1; margin: 2px }
