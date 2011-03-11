@@ -20,7 +20,7 @@ So, for starters, I created a variable to store the remote path where I do the m
 
 {% endhighlight %}
 
-Then I added some more stuff
+Next, I created a function that would make sure the proper initialization steps were taken with the connection and a macro that I could use to evaluate elisp code in the context of the remote machine.
 
 {% highlight cl %}
 
@@ -36,6 +36,43 @@ Then I added some more stuff
 
 {% endhighlight %}
 
+And then some elisp to a) get a list of colleagues to whom I could submit a patch for review and b) perform the actual patch submit.
+
+{% highlight cl %}
+
+    (defvar rayners/tool-submit-hooks nil "hook variable for patches that are being submitted")
+
+    (defun rayners/submitters ()
+      (interactive)
+      (with-remote-dir
+        (with-temp-buffer
+          (shell-command "shell_command_to_get_colleague_list" t)
+          (split-string (buffer-string)))))
+    
+    (require 'ido)
+    (defun rayners/gitc-submit ()
+      (interactive)
+      (let ((submitters (rayners/submitters)))
+        (let ((submit-to (ido-completing-read "Submit to: " submitters)))
+          (with-remote-dir
+           (shell-command (format "submit_tool %s &" submit-to) "*submit_tool*"))
+          (run-hooks 'rayners/tool-submit-hooks))))
+
+{$ endhighlight %}
+
+Notice the hook there? I use [orgmode][] to track my time, and I thought it would be super-nifty if I could automatically stop the clock for the current task when I submit a patch.
+
+{% highlight cl %}
+
+    (defun rayners/submit-clock-out ()
+      "Clock out when submitting, unless arg is present"
+      ;; clock out of the current task timer
+      ;; unless there was a prefix argument
+      (if (org-clock-is-active)
+          (org-clock-out)))
+    (add-hook 'gitc-submit-hooks 'rayners/submit-clock-out)
+
+{% endhighlight %}
 
   [orgmode]: http://orgmode.org/
   [TRAMP]: http://www.emacswiki.org/cgi-bin/wiki/TrampMode
