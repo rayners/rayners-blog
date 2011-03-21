@@ -59,3 +59,5 @@ aside {
 }
 
 article aside p { line-height: 1.1; margin: 2px }
+
+blockquote { border-left: 10px solid #3A5F3A; background: lightgreen; margin-left: 15px; padding: 2px 5px; }
