@@ -1,5 +1,6 @@
 ---
 title: Retooling
+layout: post
 ---
 
 While I am still continuing to use emacs, I am taking some time to try out new some new tools.
