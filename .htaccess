@@ -476,3 +476,7 @@ Options -Indexes
 php_value session.cookie_httponly true
 </IfModule>
 
+<IfModule mod_rewrite.c>
+RewriteCond %{HTTP_USER_AGENT} !FeedBurner
+RewriteRule ^atom\.xml$ http://feeds.rayners.org/DavidRaynes [R,L]
+</IfModule>
