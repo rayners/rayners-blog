@@ -3,7 +3,7 @@ layout: default
 ---
 {% for post in site.posts limit:10 %}
 <article>
-  <header><h1><a href="/{{ post.url }}">{{ post.title }}</a></h1></header>
+  <header><h1><a href="{{ post.url }}">{{ post.title }}</a></h1></header>
 {{ post.content }}
   <footer><time date="{{ post.date }}" pubdate>{{ post.date | date: "%b %d" }}</time></footer>
 </article>
