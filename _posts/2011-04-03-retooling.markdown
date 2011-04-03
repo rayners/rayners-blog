@@ -16,18 +16,18 @@ Oh, and I have switched to [jekyll](http://jekyllrb.com/) for my blog, with [Dis
 For the curious, here are the contents of that hook:
 
 {% highlight bash %}
-    #!/bin/bash
-    
-    GIT_REPO=$HOME/git/rayners-blog.git
-    TMP_GIT_CLONE=$HOME/tmp/rayners-blog
-    PUBLIC_WWW=/var/www/domains/www.rayners.org/jekyll
-    
-    . $HOME/.rvm/scripts/rvm
-    
-    git clone $GIT_REPO $TMP_GIT_CLONE
-    jekyll --no-auto $TMP_GIT_CLONE $PUBLIC_WWW
-    rm -Rf $TMP_GIT_CLONE
-    exit
+#!/bin/bash
+
+GIT_REPO=$HOME/git/rayners-blog.git
+TMP_GIT_CLONE=$HOME/tmp/rayners-blog
+PUBLIC_WWW=/var/www/domains/www.rayners.org/jekyll
+
+. $HOME/.rvm/scripts/rvm
+
+git clone $GIT_REPO $TMP_GIT_CLONE
+jekyll --no-auto $TMP_GIT_CLONE $PUBLIC_WWW
+rm -Rf $TMP_GIT_CLONE
+exit
 {% endhighlight %}
 
 And I am completely redoing the blog's design and layout and such. I cannot promise it is any good, but at least it is mine. Comments, thoughts and suggestions are certainly appreciated!
