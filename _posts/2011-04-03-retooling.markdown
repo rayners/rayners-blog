@@ -20,7 +20,7 @@ For the curious, here are the contents of that hook:
 
 GIT_REPO=$HOME/git/rayners-blog.git
 TMP_GIT_CLONE=$HOME/tmp/rayners-blog
-PUBLIC_WWW=/var/www/domains/www.rayners.org/jekyll
+PUBLIC_WWW=/var/www/domains/www.rayners.org
 
 . $HOME/.rvm/scripts/rvm
 
