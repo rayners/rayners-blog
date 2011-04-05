@@ -38,14 +38,15 @@ pre, code { font-family: 'Droid Sans Mono'; }
 div.highlight { clear:both }
 section#main article > p { line-height: 1.2 }
 ul, menu, dir {
-	display: block;
-	list-style-type: square;
+/*	display: block;
+	list-style-type: square;*/
 	line-height: 1.2;
+        margin-left: 2em;
 }
-li {
+/*li {
 	display: list-item;
 	margin-left: 3em;
-}
+}*/
 
 aside {
 	float: right;
